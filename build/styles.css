@@ -54,6 +54,7 @@ footer p {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+<<<<<<< HEAD
 
 .note button {
   position: relative;
@@ -100,3 +101,5 @@ form button {
   cursor: pointer;
   outline: none;
 }
+=======
+>>>>>>> 326d2544c14bd02f52be950af725e03e04908271

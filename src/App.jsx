@@ -6,7 +6,6 @@ import CreateArea from "./components/CreateArea"
 
 function App() {
   const [notes, setNotes] = useState([])
-
   function addNote(newNote) {
     setNotes(prevNotes => {
       return [...prevNotes, newNote]
@@ -26,11 +25,10 @@ function App() {
       <Header />
       <CreateArea onAdd={addNote} />
       {notes.map((noteItem, index) => {
-        return <Note key={index} id={index} title={noteItem.title} content={noteItem.content} onDelete={deleteNote} />
+        return <Note key={index} id={index} title={noteItem.title} content={noteItem.content} time={new Date().toLocaleTimeString()} onDelete={deleteNote} />
       })}
       <Footer />
     </div>
   )
 }
-
 export default App
