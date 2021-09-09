@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import HighlightIcon from "@material-ui/icons/Highlight"
 
 function Header() {
   const [currTime, setTime] = useState(new Date().toLocaleTimeString())
@@ -7,7 +8,10 @@ function Header() {
   }, 1000)
   return (
     <header>
-      <h1>Keeper</h1>
+      <h1>
+        <HighlightIcon />
+        Keeper
+      </h1>
       <div className="Timer">{currTime}</div>
     </header>
   )

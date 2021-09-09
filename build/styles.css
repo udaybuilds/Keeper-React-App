@@ -19,13 +19,25 @@ header {
 }
 
 header h1 {
+  display: inline;
+  margin-right: 40px;
   color: #fff;
   font-family: "McLaren", cursive;
   font-weight: 200;
 }
+.Timer {
+  display: inline;
+  position: absolute;
+  right: 100px;
+  font-size: 25px;
+  margin-top: auto;
+  color: aliceblue;
+  font-family: "Algerian", sans-serif;
+}
 
 footer {
   position: absolute;
+  display: block;
   text-align: center;
   bottom: 0;
   width: 100%;
@@ -33,6 +45,7 @@ footer {
 }
 
 footer p {
+  /* margin-top: 20%; */
   color: #ccc;
 }
 .note {
@@ -54,7 +67,6 @@ footer p {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
-<<<<<<< HEAD
 
 .note button {
   position: relative;
@@ -101,5 +113,3 @@ form button {
   cursor: pointer;
   outline: none;
 }
-=======
->>>>>>> 326d2544c14bd02f52be950af725e03e04908271
