@@ -1,0 +1,16 @@
+trigger:
+- gh-pages
+
+stages:
+- stage: Build
+  jobs:
+  - job: Build
+    steps:
+    - task: Npm@1
+      inputs:
+        command: 'install'
+    - task: Npm@1
+      inputs:
+        command: 'custom'
+        customCommand: 'run build'
+    
