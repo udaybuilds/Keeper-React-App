@@ -5,7 +5,13 @@ stages:
 - stage: Build
   jobs:
   - job: Build
+    pool:
+      vmImage: 'windows-latest'
     steps:
+    - task: Npm@1
+      inputs:
+        command: 'custom'
+        customCommand: 'install cross-env --save-dev'
     - task: Npm@1
       inputs:
         command: 'install'
