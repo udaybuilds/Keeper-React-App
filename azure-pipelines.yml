@@ -19,6 +19,11 @@ stages:
       inputs:
         command: 'custom'
         customCommand: 'run build'
+    - task: CmdLine@2
+      inputs:
+        script: |
+          git config --global user.name "Uday"
+          git config --global user.email "udaysrivastava0@gmail.com"
     - task: Npm@1
       inputs:
         command: 'custom'
