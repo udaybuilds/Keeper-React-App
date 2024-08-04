@@ -10,7 +10,7 @@ function Header() {
     <header>
       <h1>
         <HighlightIcon />
-        Keeper
+        Ud@Y's Notebook
       </h1>
       <div className="Timer">{currTime}</div>
     </header>
