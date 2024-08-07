@@ -1,5 +1,7 @@
 trigger:
 - master
+variables:
+- group: Github Secrets
 
 stages:
 - stage: Build
@@ -19,11 +21,12 @@ stages:
       inputs:
         command: 'custom'
         customCommand: 'run build'
-    # - task: CmdLine@2
-    #   inputs:
-    #     script: |
-    #       git config --global user.name "Uday"
-    #       git config --global user.email "udaysrivastava0@gmail.com"
+    - task: CmdLine@2
+      inputs:
+        script: |
+          git config --global user.name "Uday"
+          git config --global user.email "udaysrivastava0@gmail.com"
+          git remote set-url origin https://$(PAT)@github.com/udaybuilds/Keeper-React-App
     
     - task: Npm@1
       inputs:
